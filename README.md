@@ -34,5 +34,5 @@ A. Start git repo locally (on my computer)
         ii. Type:  
         * git push -u origin main  
         * Now, only "git push" need be typed  
-    7. 
+
         
