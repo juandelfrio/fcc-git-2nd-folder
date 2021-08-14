@@ -35,4 +35,23 @@ A. Start git repo locally (on my computer)
         * git push -u origin main  
         * Now, only "git push" need be typed  
 
+B. Correcting push errors: 
+    1. No master in GitHub to push to:  
+       * "error: src refspec main does not match any"    
+       * "error: failed to push some refs to"  
+       i. These errors mean GitHub has no branch to place commits.  So a new "master" branch is required.  
+       *  Reference: https://stackoverflow.com/questions/65173291/git-push-error-src-refspec-main-does-not-match-any-on-linux  
+       ii. Type in PowerShell:  
+       *  
+       * git push origin master
+       *  
+       * Or, to create a new name for the master branch, type:  
+       *  
+       *  git branch -m master <yourBranchNameBUTNOTmain>  
+       *    
+       * If the master branch is named "main" or not named at all, an error occurs.  
+    2. Unsaved files in git repo.  
+        i. Save the files, then check git status
+
+       
         
