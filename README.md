@@ -35,6 +35,11 @@ A. Start git repo locally (on my computer)
          * git push -u origin main   
       * Now, only "git push" need be typed  
 
+## Branch Intro
+
+A. Purpose: Branching sets storage for new code testing and dev separate from earlier versions of the code that are known to work.  
+   * Branches can be made along any point in the main code as testing grounds for debugging or modification.  
+
 B. Correcting push errors: 
    1. No master in GitHub to push to:  
        * "error: src refspec main does not match any"    
@@ -49,7 +54,36 @@ B. Correcting push errors:
    2. Unsaved files in git repo.  
          i. Save the files, then check git status
 
-C. Delete (non-master) Branch  
+C. Delete and create (non-master) Branch  
    1. Delete a remote branch:  
-         * git push origin --delete myBranchName  
+         * git push origin --delete myBranchName 
+   * Reference: https://www.git-tower.com/learn/git/faq/delete-local-branch/   
+   2. Create a new non-master branch: name it descriptively:  
+         * git checkout -b yourBranchName
+   3. To change to a new branch in terminal:  
+         * git checkout yourBranchName  
 
+D. Working with branches  
+   1. To add a repo or isolated update to the branch:  
+         i. Confirm you're in the branch you want  
+         * git branch  
+   2. Review repo or isolated update status in main branch and new branch:  
+         i. git add myRepoName or git add .  
+         ii. Check main branch:  
+         * git checkout mainBranch  
+         * Message at bottom says, "Branch up to date with 'origin/main'.  
+         iii. Check new branch:  
+         * git checkout newBranch  
+         * Modified fileName should appear, with M in front.  
+         iv. Compare new branch file changes to main branch file:  
+         * git diff  
+         * Displayed in terminal: fileName, subheader, and changes to file.  
+   3. If ready, you could merge new branch with main branch, but more commonly, push new branch and contents to GitHub  
+         i. GitHub needs a new branch for new local branch to push to.  
+         ii. Hence, 'git push' alone results in error  
+         * git push -u origin newBranchName
+
+E. Pull requests and Merging  
+   1. The new branch and its new file or isolated update should be on GitHub.  
+   2. PR (Pull Request) on GitHub and Terminal
+         i. GitHub button:  
